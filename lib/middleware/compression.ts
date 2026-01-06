@@ -19,7 +19,7 @@
  * ```
  */
 
-import { NextRequest } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { gzip, brotliCompress } from 'zlib'
 import { promisify } from 'util'
 

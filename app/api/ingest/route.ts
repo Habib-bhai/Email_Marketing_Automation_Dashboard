@@ -168,7 +168,8 @@ export async function POST(request: NextRequest) {
         }
       )
     }
-  } catch (error) {
+    // eslint-disable-next-line
+  } catch (error: any) {
     // Unexpected error (middleware should have caught most errors)
     const errorMessage = error?.message || 'Unexpected error'
     logger.ingestion.failure('unknown', errorMessage, 'unexpected_error')

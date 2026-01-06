@@ -52,7 +52,8 @@ export async function parallelFetch<T extends Record<string, any>>(
         success: true,
         data: data.data || data
       }
-    } catch (error) {
+      // eslint-disable-next-line
+    } catch (error:any) {
       results[key] = {
         success: false,
         error: error.message || 'Unknown error occurred'

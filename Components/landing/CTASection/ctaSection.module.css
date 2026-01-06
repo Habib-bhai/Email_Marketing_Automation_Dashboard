@@ -1,0 +1,12 @@
+.ctaSection {
+  position: relative;
+  background: linear-gradient(to bottom, #000000, #0a0a0a, #000000);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .ctaSection * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

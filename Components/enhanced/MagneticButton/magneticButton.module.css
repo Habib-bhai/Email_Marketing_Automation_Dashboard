@@ -1,0 +1,85 @@
+/* Components/enhanced/MagneticButton/magneticButton.module.css */
+/* T146 - Magnetic Button styles */
+
+.magneticWrapper {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.magneticButton {
+  position: relative;
+  will-change: transform;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Active state: Faster, more responsive transition */
+.magneticButton.isHovered {
+  transition: none;
+}
+
+/* Content wrapper for additional effects */
+.content {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Ripple effect on click */
+.magneticButton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease, transform 0.6s ease;
+}
+
+.magneticButton:active::after {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0s, transform 0s;
+}
+
+/* Glow effect on hover (for default variant) */
+.magneticButton.isHovered {
+  box-shadow:
+    0 0 20px rgba(var(--primary-rgb, 59 130 246), 0.3),
+    0 0 40px rgba(var(--primary-rgb, 59 130 246), 0.1);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .magneticButton {
+    transition: none;
+  }
+
+  .magneticButton.isHovered {
+    transform: none !important;
+    box-shadow: none;
+  }
+
+  .magneticButton::after {
+    display: none;
+  }
+}
+
+/* Focus visible state for accessibility */
+.magneticButton:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Disabled state */
+.magneticButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none !important;
+}

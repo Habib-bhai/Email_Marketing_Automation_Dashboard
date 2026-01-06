@@ -1,0 +1,55 @@
+.skipLink {
+  /* Visually hidden by default */
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  
+  /* Styling */
+  padding: 1rem 1.5rem;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  
+  /* Smooth transition */
+  transition: top 0.2s ease-in-out;
+}
+
+/* Show on focus (keyboard navigation) */
+.skipLink:focus {
+  top: 0;
+  outline: 3px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Hover state for visual feedback */
+.skipLink:hover {
+  background: hsl(var(--primary) / 0.9);
+}
+
+/* Active state */
+.skipLink:active {
+  transform: translateY(1px);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .skipLink {
+    border: 2px solid currentColor;
+  }
+  
+  .skipLink:focus {
+    outline-width: 4px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .skipLink {
+    transition: none;
+  }
+}

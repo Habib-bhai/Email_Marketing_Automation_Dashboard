@@ -1,0 +1,122 @@
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.bentoGridItem {
+  position: relative;
+  min-height: 200px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Grid item spans - Asymmetric layout */
+.small {
+  grid-column: span 4;
+}
+
+.medium {
+  grid-column: span 6;
+}
+
+.large {
+  grid-column: span 8;
+}
+
+.xlarge {
+  grid-column: span 12;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .small {
+    grid-column: span 4;
+  }
+
+  .medium {
+    grid-column: span 8;
+  }
+
+  .large {
+    grid-column: span 8;
+  }
+
+  .xlarge {
+    grid-column: span 8;
+  }
+}
+
+@media (max-width: 768px) {
+  .bentoGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .small,
+  .medium,
+  .large,
+  .xlarge {
+    grid-column: span 4;
+  }
+}
+
+@media (max-width: 480px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .small,
+  .medium,
+  .large,
+  .xlarge {
+    grid-column: span 1;
+  }
+
+  .bentoGridItem {
+    min-height: 180px;
+  }
+}
+
+/* Animation on scroll */
+.bentoGridItem {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.bentoGridItem:nth-child(1) { animation-delay: 0.1s; }
+.bentoGridItem:nth-child(2) { animation-delay: 0.2s; }
+.bentoGridItem:nth-child(3) { animation-delay: 0.3s; }
+.bentoGridItem:nth-child(4) { animation-delay: 0.4s; }
+.bentoGridItem:nth-child(5) { animation-delay: 0.5s; }
+.bentoGridItem:nth-child(6) { animation-delay: 0.6s; }
+.bentoGridItem:nth-child(7) { animation-delay: 0.7s; }
+.bentoGridItem:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .bentoGridItem {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,35 @@
+
+> kpi-dashboard@0.1.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of D:\email_marketing_automation_dashboard\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * D:\email_marketing_automation_dashboard\frontend\package-lock.json
+
+▲ Next.js 16.1.1 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 25.3s
+  Running TypeScript ...
+  Collecting page data using 3 workers ...
+ReferenceError: Cannot access 'op' before initialization
+    at new <anonymous> (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\frontend_lib_db_connection_ts_9806d6b0._.js:25:46260)
+    at module evaluation (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\frontend_lib_db_connection_ts_9806d6b0._.js:25:45710)
+    at instantiateModule (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\[turbopack]_runtime.js:740:9)
+    at getOrInstantiateModuleFromParent (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\[turbopack]_runtime.js:763:12)
+    at Context.esmImport [as i] (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\[root-of-the-server]__45c2a211._.js:1:2679)
+    at instantiateModule (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\[turbopack]_runtime.js:740:9)
+    at getOrInstantiateModuleFromParent (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\[turbopack]_runtime.js:763:12)
+    at Context.esmImport [as i] (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\[root-of-the-server]__45c2a211._.js:1:4151)
+
+> Build error occurred
+Error: Failed to collect page data for /api/dashboard/leads
+    at ignore-listed frames {
+  type: 'Error'
+}

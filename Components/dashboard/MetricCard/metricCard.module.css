@@ -1,0 +1,73 @@
+/* Components/dashboard/MetricCard/metricCard.module.css */
+
+/**
+ * T089 - Metric card styles
+ */
+
+.metricCard {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: all 0.2s ease;
+}
+
+/* Color variants */
+.color-primary .iconWrapper {
+  --color-bg: hsl(var(--primary) / 0.1);
+  --color-text: hsl(var(--primary));
+}
+
+.color-success .iconWrapper {
+  --color-bg: hsl(142 76% 36% / 0.1);
+  --color-text: hsl(142 76% 36%);
+}
+
+.color-warning .iconWrapper {
+  --color-bg: hsl(38 92% 50% / 0.1);
+  --color-text: hsl(38 92% 50%);
+}
+
+.color-danger .iconWrapper {
+  --color-bg: hsl(var(--destructive) / 0.1);
+  --color-text: hsl(var(--destructive));
+}
+
+.color-info .iconWrapper {
+  --color-bg: hsl(199 89% 48% / 0.1);
+  --color-text: hsl(199 89% 48%);
+}
+
+/* Hover effects for color variants */
+.color-primary:hover .iconWrapper {
+  background: hsl(var(--primary) / 0.15);
+}
+
+.color-success:hover .iconWrapper {
+  background: hsl(142 76% 36% / 0.15);
+}
+
+.color-warning:hover .iconWrapper {
+  background: hsl(38 92% 50% / 0.15);
+}
+
+.color-danger:hover .iconWrapper {
+  background: hsl(var(--destructive) / 0.15);
+}
+
+.color-info:hover .iconWrapper {
+  background: hsl(199 89% 48% / 0.15);
+}

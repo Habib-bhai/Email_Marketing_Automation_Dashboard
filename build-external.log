@@ -1,0 +1,57 @@
+
+> kpi-dashboard@0.1.0 build
+> next build
+
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of D:\email_marketing_automation_dashboard\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * D:\email_marketing_automation_dashboard\frontend\package-lock.json
+
+   ▲ Next.js 15.5.9
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 29.9s
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+ReferenceError: Cannot access 'f' before initialization
+    at new d (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\campaigns\route.js:1:11604)
+    at 93063 (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\campaigns\route.js:1:11624)
+    at c (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:142)
+    at <unknown> (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\campaigns\route.js:1:3855)
+    at c.a (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:700)
+    at 40456 (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\campaigns\route.js:1:3766)
+    at c (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:142)
+    at <unknown> (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\campaigns\route.js:1:5409)
+    at c.a (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:700)
+    at 45760 (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\campaigns\route.js:1:5078)
+ReferenceError: Cannot access 'f' before initialization
+    at new d (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\905.js:1:9529)
+    at 93063 (D:\email_marketing_automation_dashboard\frontend\.next\server\chunks\905.js:1:9549)
+    at c (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:142)
+    at <unknown> (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\metrics\email-engagement\route.js:1:1004)
+    at c.a (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:700)
+    at 65257 (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\metrics\email-engagement\route.js:1:915)
+    at c (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:142)
+    at <unknown> (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\metrics\email-engagement\route.js:1:1689)
+    at c.a (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:700)
+    at 77916 (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\metrics\email-engagement\route.js:1:1358)
+ReferenceError: Cannot access 'f' before initialization
+    at new d (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\leads\route.js:1:5352)
+    at 93063 (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\leads\route.js:1:5372)
+    at c (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:142)
+    at <unknown> (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\leads\route.js:1:3759)
+    at c.a (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:700)
+    at 64908 (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\leads\route.js:1:3670)
+    at c (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:142)
+    at <unknown> (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\leads\route.js:1:6299)
+    at c.a (D:\email_marketing_automation_dashboard\frontend\.next\server\webpack-runtime.js:1:700)
+    at 93664 (D:\email_marketing_automation_dashboard\frontend\.next\server\app\api\dashboard\leads\route.js:1:5968)
+
+> Build error occurred
+[Error: Failed to collect page data for /api/dashboard/campaigns] {
+  type: 'Error'
+}
